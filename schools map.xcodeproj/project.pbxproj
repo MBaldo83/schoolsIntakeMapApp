@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A915E4122772F4100F49AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E4022772F4100F49AD3 /* AppDelegate.swift */; };
+		1A915E4322772F4100F49AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E4222772F4100F49AD3 /* ViewController.swift */; };
+		1A915E4622772F4100F49AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A915E4422772F4100F49AD3 /* Main.storyboard */; };
+		1A915E4822772F4300F49AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A915E4722772F4300F49AD3 /* Assets.xcassets */; };
+		1A915E4B22772F4300F49AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */; };
+		1A915E5622772F4300F49AD3 /* schools_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E5522772F4300F49AD3 /* schools_mapTests.swift */; };
+		1A915E6122772F4300F49AD3 /* schools_mapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1A915E5222772F4300F49AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A915E3522772F4100F49AD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A915E3C22772F4100F49AD3;
+			remoteInfo = "schools map";
+		};
+		1A915E5D22772F4300F49AD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A915E3522772F4100F49AD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A915E3C22772F4100F49AD3;
+			remoteInfo = "schools map";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A915E3D22772F4100F49AD3 /* schools map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "schools map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A915E4022772F4100F49AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A915E4222772F4100F49AD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A915E4522772F4100F49AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A915E4722772F4300F49AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A915E4A22772F4300F49AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A915E4C22772F4300F49AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A915E5122772F4300F49AD3 /* schools mapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "schools mapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A915E5522772F4300F49AD3 /* schools_mapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schools_mapTests.swift; sourceTree = "<group>"; };
+		1A915E5722772F4300F49AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A915E5C22772F4300F49AD3 /* schools mapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "schools mapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schools_mapUITests.swift; sourceTree = "<group>"; };
+		1A915E6222772F4300F49AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A915E3A22772F4100F49AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E4E22772F4300F49AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E5922772F4300F49AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A915E3422772F4100F49AD3 = {
+			isa = PBXGroup;
+			children = (
+				1A915E3F22772F4100F49AD3 /* schools map */,
+				1A915E5422772F4300F49AD3 /* schools mapTests */,
+				1A915E5F22772F4300F49AD3 /* schools mapUITests */,
+				1A915E3E22772F4100F49AD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A915E3E22772F4100F49AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A915E3D22772F4100F49AD3 /* schools map.app */,
+				1A915E5122772F4300F49AD3 /* schools mapTests.xctest */,
+				1A915E5C22772F4300F49AD3 /* schools mapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A915E3F22772F4100F49AD3 /* schools map */ = {
+			isa = PBXGroup;
+			children = (
+				1A915E4022772F4100F49AD3 /* AppDelegate.swift */,
+				1A915E4222772F4100F49AD3 /* ViewController.swift */,
+				1A915E4422772F4100F49AD3 /* Main.storyboard */,
+				1A915E4722772F4300F49AD3 /* Assets.xcassets */,
+				1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */,
+				1A915E4C22772F4300F49AD3 /* Info.plist */,
+			);
+			path = "schools map";
+			sourceTree = "<group>";
+		};
+		1A915E5422772F4300F49AD3 /* schools mapTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A915E5522772F4300F49AD3 /* schools_mapTests.swift */,
+				1A915E5722772F4300F49AD3 /* Info.plist */,
+			);
+			path = "schools mapTests";
+			sourceTree = "<group>";
+		};
+		1A915E5F22772F4300F49AD3 /* schools mapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */,
+				1A915E6222772F4300F49AD3 /* Info.plist */,
+			);
+			path = "schools mapUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A915E3C22772F4100F49AD3 /* schools map */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A915E6522772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools map" */;
+			buildPhases = (
+				1A915E3922772F4100F49AD3 /* Sources */,
+				1A915E3A22772F4100F49AD3 /* Frameworks */,
+				1A915E3B22772F4100F49AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "schools map";
+			productName = "schools map";
+			productReference = 1A915E3D22772F4100F49AD3 /* schools map.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1A915E5022772F4300F49AD3 /* schools mapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A915E6822772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools mapTests" */;
+			buildPhases = (
+				1A915E4D22772F4300F49AD3 /* Sources */,
+				1A915E4E22772F4300F49AD3 /* Frameworks */,
+				1A915E4F22772F4300F49AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A915E5322772F4300F49AD3 /* PBXTargetDependency */,
+			);
+			name = "schools mapTests";
+			productName = "schools mapTests";
+			productReference = 1A915E5122772F4300F49AD3 /* schools mapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1A915E5B22772F4300F49AD3 /* schools mapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A915E6B22772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools mapUITests" */;
+			buildPhases = (
+				1A915E5822772F4300F49AD3 /* Sources */,
+				1A915E5922772F4300F49AD3 /* Frameworks */,
+				1A915E5A22772F4300F49AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A915E5E22772F4300F49AD3 /* PBXTargetDependency */,
+			);
+			name = "schools mapUITests";
+			productName = "schools mapUITests";
+			productReference = 1A915E5C22772F4300F49AD3 /* schools mapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A915E3522772F4100F49AD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Shed Light";
+				TargetAttributes = {
+					1A915E3C22772F4100F49AD3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1A915E5022772F4300F49AD3 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1A915E3C22772F4100F49AD3;
+					};
+					1A915E5B22772F4300F49AD3 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1A915E3C22772F4100F49AD3;
+					};
+				};
+			};
+			buildConfigurationList = 1A915E3822772F4100F49AD3 /* Build configuration list for PBXProject "schools map" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A915E3422772F4100F49AD3;
+			productRefGroup = 1A915E3E22772F4100F49AD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A915E3C22772F4100F49AD3 /* schools map */,
+				1A915E5022772F4300F49AD3 /* schools mapTests */,
+				1A915E5B22772F4300F49AD3 /* schools mapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A915E3B22772F4100F49AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A915E4B22772F4300F49AD3 /* LaunchScreen.storyboard in Resources */,
+				1A915E4822772F4300F49AD3 /* Assets.xcassets in Resources */,
+				1A915E4622772F4100F49AD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E4F22772F4300F49AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E5A22772F4300F49AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A915E3922772F4100F49AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A915E4322772F4100F49AD3 /* ViewController.swift in Sources */,
+				1A915E4122772F4100F49AD3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E4D22772F4300F49AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A915E5622772F4300F49AD3 /* schools_mapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A915E5822772F4300F49AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A915E6122772F4300F49AD3 /* schools_mapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A915E5322772F4300F49AD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A915E3C22772F4100F49AD3 /* schools map */;
+			targetProxy = 1A915E5222772F4300F49AD3 /* PBXContainerItemProxy */;
+		};
+		1A915E5E22772F4300F49AD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A915E3C22772F4100F49AD3 /* schools map */;
+			targetProxy = 1A915E5D22772F4300F49AD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1A915E4422772F4100F49AD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A915E4522772F4100F49AD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A915E4A22772F4300F49AD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A915E6322772F4300F49AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A915E6422772F4300F49AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A915E6622772F4300F49AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools map/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A915E6722772F4300F49AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools map/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-map";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1A915E6922772F4300F49AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools mapTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-mapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/schools map.app/schools map";
+			};
+			name = Debug;
+		};
+		1A915E6A22772F4300F49AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools mapTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-mapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/schools map.app/schools map";
+			};
+			name = Release;
+		};
+		1A915E6C22772F4300F49AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools mapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-mapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "schools map";
+			};
+			name = Debug;
+		};
+		1A915E6D22772F4300F49AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "schools mapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.shedLight.schools-mapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "schools map";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A915E3822772F4100F49AD3 /* Build configuration list for PBXProject "schools map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A915E6322772F4300F49AD3 /* Debug */,
+				1A915E6422772F4300F49AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A915E6522772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools map" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A915E6622772F4300F49AD3 /* Debug */,
+				1A915E6722772F4300F49AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A915E6822772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools mapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A915E6922772F4300F49AD3 /* Debug */,
+				1A915E6A22772F4300F49AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A915E6B22772F4300F49AD3 /* Build configuration list for PBXNativeTarget "schools mapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A915E6C22772F4300F49AD3 /* Debug */,
+				1A915E6D22772F4300F49AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A915E3522772F4100F49AD3 /* Project object */;
+}
