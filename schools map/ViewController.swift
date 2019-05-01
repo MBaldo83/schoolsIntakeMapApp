@@ -12,6 +12,7 @@ import MapKit
 class ViewController: UIViewController {
   
   @IBOutlet var mapView: MKMapView!
+  var userLocation: CLLocation?
   
   let schoolsData = [School(name: "North Haringey",
                             coordinate: CLLocationCoordinate2D(latitude: 51.58572, longitude: -0.10619),
@@ -44,6 +45,24 @@ class ViewController: UIViewController {
     let mapRegion = MKCoordinateRegion(center:mapInitialCentre,
                                        span: mapInitialSpan)
     mapView.setRegion(mapRegion, animated: false)
+
+    let location = "N8 0QJ"
+    let geocoder = CLGeocoder()
+    geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
+
+      if let placemark = placemarks?.first,
+         let location = placemark.location {
+
+        guard let strongSelf = self else {return}
+        let mark = MKPlacemark(placemark: placemark)
+
+        var region = strongSelf.mapView.region
+        region.center = location.coordinate
+        strongSelf.mapView.setRegion(region, animated: true)
+        strongSelf.mapView.addAnnotation(mark)
+        strongSelf.userLocation = location
+      }
+    }
     
   }
 }
@@ -58,16 +77,45 @@ extension ViewController: MKMapViewDelegate {
       circleView.fillColor = intakeBoundary.color
       circleView.lineWidth = 1
       return circleView
+    } else if let userDistanceOverlay = overlay as? SchoolDistanceToUser {
+      let circleView = MKCircleRenderer(overlay: userDistanceOverlay)
+      circleView.strokeColor = UIColor.black.withAlphaComponent(0.1)
+      circleView.fillColor = UIColor.black.withAlphaComponent(0.1)
+      circleView.lineWidth = 1
+      return circleView
     }
     
     return MKOverlayRenderer()
+  }
+
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+
+    if let selectedSchool = view.annotation as? School {
+      print("school: \(selectedSchool.name)")
+
+      if let knownUserLocation = userLocation {
+        let schoolLocation = CLLocation(latitude: selectedSchool.coordinate.latitude,
+                                        longitude: selectedSchool.coordinate.longitude)
+        let distance = schoolLocation.distance(from: knownUserLocation)
+        print("distance from User: \(distance)m")
+
+        mapView.addOverlay(SchoolDistanceToUser(center: selectedSchool.coordinate, radius: distance))
+      }
+
+    }
+
   }
   
 }
 
 class School: NSObject, MKAnnotation {
   
-  let title: String?
+  var title: String? {
+    get {
+      return name
+    }
+  }
+  let name: String
   let coordinate: CLLocationCoordinate2D
   let intakeBoundary: SchoolIntakeBoundary
   
@@ -76,7 +124,7 @@ class School: NSObject, MKAnnotation {
        intakeRadius:CLLocationDistance,
        color:UIColor) {
     
-    self.title = name
+    self.name = name
     self.coordinate = coordinate
     self.intakeBoundary = SchoolIntakeBoundary(center: coordinate, radius: intakeRadius)
     self.intakeBoundary.color = color
@@ -87,6 +135,7 @@ class School: NSObject, MKAnnotation {
 
 class SchoolIntakeBoundary: MKCircle {
   var color: UIColor?
-  
 }
+
+class SchoolDistanceToUser: MKCircle { }
 
