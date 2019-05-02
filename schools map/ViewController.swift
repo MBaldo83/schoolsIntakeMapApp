@@ -12,24 +12,35 @@ import MapKit
 class ViewController: UIViewController {
   
   @IBOutlet var mapView: MKMapView!
+  @IBOutlet var distanceFromSchoolLabel: UILabel!
+  @IBOutlet var intakeRadiusLabel: UILabel!
+  @IBOutlet var offersBasedOnDistanceLabel: UILabel!
+  @IBOutlet var estimatedQueuePositionLabel: UILabel!
+  @IBOutlet var stackView: UIStackView!
+
   var userLocation: CLLocation?
   
   let schoolsData = [School(name: "North Haringey",
                             coordinate: CLLocationCoordinate2D(latitude: 51.58572, longitude: -0.10619),
                             intakeRadius: 424,
-                            color: UIColor.red.withAlphaComponent(0.25)),
+                            color: UIColor.red.withAlphaComponent(0.25),
+                            offersBasedOnDistance:40),
                      School(name: "Belmont Junior",
                             coordinate: CLLocationCoordinate2D(latitude: 51.59276, longitude: -0.09365),
                             intakeRadius: 456,
-                            color: UIColor.blue.withAlphaComponent(0.25)),
+                            color: UIColor.blue.withAlphaComponent(0.25),
+                            offersBasedOnDistance:30),
                      School(name: "St Mary's",
                             coordinate: CLLocationCoordinate2D(latitude: 51.58596, longitude: -0.11523),
                             intakeRadius: 600,
-                            color: UIColor.yellow.withAlphaComponent(0.25))]
+                            color: UIColor.yellow.withAlphaComponent(0.25),
+                            offersBasedOnDistance:40)]
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
+    stackView.isHidden = true
+
     mapView.showsUserLocation = true
     
     for school in schoolsData {
@@ -93,6 +104,8 @@ extension ViewController: MKMapViewDelegate {
     if let selectedSchool = view.annotation as? School {
       print("school: \(selectedSchool.name)")
 
+      removeOverlaysDistanceOverlays()
+
       if let knownUserLocation = userLocation {
         let schoolLocation = CLLocation(latitude: selectedSchool.coordinate.latitude,
                                         longitude: selectedSchool.coordinate.longitude)
@@ -100,10 +113,24 @@ extension ViewController: MKMapViewDelegate {
         print("distance from User: \(distance)m")
 
         mapView.addOverlay(SchoolDistanceToUser(center: selectedSchool.coordinate, radius: distance))
+        distanceFromSchoolLabel.text = "\(distance)m"
+        intakeRadiusLabel.text = "\(selectedSchool.intakeBoundary.radius)m"
+        offersBasedOnDistanceLabel.text = "\(selectedSchool.offersBasedOnDistance)"
+        //TODO
+        estimatedQueuePositionLabel.text = "TODO..."
+        stackView.isHidden = false
       }
-
     }
 
+  }
+
+  private func removeOverlaysDistanceOverlays() {
+
+    for overlay in mapView.overlays {
+      if overlay is SchoolDistanceToUser {
+        mapView.removeOverlay(overlay)
+      }
+    }
   }
   
 }
@@ -118,16 +145,19 @@ class School: NSObject, MKAnnotation {
   let name: String
   let coordinate: CLLocationCoordinate2D
   let intakeBoundary: SchoolIntakeBoundary
+  let offersBasedOnDistance: Int
   
   init(name:String,
        coordinate:CLLocationCoordinate2D,
        intakeRadius:CLLocationDistance,
-       color:UIColor) {
+       color:UIColor,
+       offersBasedOnDistance:Int) {
     
     self.name = name
     self.coordinate = coordinate
     self.intakeBoundary = SchoolIntakeBoundary(center: coordinate, radius: intakeRadius)
     self.intakeBoundary.color = color
+    self.offersBasedOnDistance = offersBasedOnDistance
     
     super.init()
   }
