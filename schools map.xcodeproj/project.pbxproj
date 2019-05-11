@@ -14,6 +14,8 @@
 		1A915E4B22772F4300F49AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */; };
 		1A915E5622772F4300F49AD3 /* schools_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E5522772F4300F49AD3 /* schools_mapTests.swift */; };
 		1A915E6122772F4300F49AD3 /* schools_mapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */; };
+		1AE1AE322286E26600FF0738 /* SchoolsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */; };
+		1AE1AE342286E31500FF0738 /* SchoolsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1A915E5C22772F4300F49AD3 /* schools mapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "schools mapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schools_mapUITests.swift; sourceTree = "<group>"; };
 		1A915E6222772F4300F49AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsMapViewController.swift; sourceTree = "<group>"; };
+		1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsMapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				1A915E4022772F4100F49AD3 /* AppDelegate.swift */,
 				1A915E4222772F4100F49AD3 /* ViewController.swift */,
+				1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */,
+				1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */,
 				1A915E4422772F4100F49AD3 /* Main.storyboard */,
 				1A915E4722772F4300F49AD3 /* Assets.xcassets */,
 				1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */,
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE1AE322286E26600FF0738 /* SchoolsMapViewController.swift in Sources */,
+				1AE1AE342286E31500FF0738 /* SchoolsMapViewModel.swift in Sources */,
 				1A915E4322772F4100F49AD3 /* ViewController.swift in Sources */,
 				1A915E4122772F4100F49AD3 /* AppDelegate.swift in Sources */,
 			);
