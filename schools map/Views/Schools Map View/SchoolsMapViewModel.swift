@@ -9,20 +9,27 @@
 import Foundation
 import MapKit
 
-protocol ViewModelViewDelegateProtocol {
+protocol ViewModelViewDelegateProtocol: class {
   func updateView()
 }
 
 class SchoolsMapViewModel {
   
   var mapRegion: MKCoordinateRegion
-  var viewDelegate: ViewModelViewDelegateProtocol?
+  weak var viewDelegate: ViewModelViewDelegateProtocol?
   var userLocationPlacemark: MKPlacemark?
   var userLocation: CLLocation?
+  var schools: [School] = [School]()
+  var schoolsRepository = SchoolsRepository()
   
   init() {
     
     self.mapRegion = SchoolsMapViewModel.defaultRegion()
+  }
+  
+  func getSchools() {
+    schools = schoolsRepository.getSchools()
+    viewDelegate?.updateView()
   }
   
   func setRegionWithPostcode(_ postcode:String) {

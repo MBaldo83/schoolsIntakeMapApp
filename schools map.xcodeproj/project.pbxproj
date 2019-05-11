@@ -16,6 +16,10 @@
 		1A915E6122772F4300F49AD3 /* schools_mapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A915E6022772F4300F49AD3 /* schools_mapUITests.swift */; };
 		1AE1AE322286E26600FF0738 /* SchoolsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */; };
 		1AE1AE342286E31500FF0738 /* SchoolsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */; };
+		1AE1AE362286FB6900FF0738 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE352286FB6900FF0738 /* School.swift */; };
+		1AE1AE382286FDDD00FF0738 /* SchoolsMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE372286FDDD00FF0738 /* SchoolsMapViewDelegate.swift */; };
+		1AE1AE3A2287788500FF0738 /* SchoolsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE392287788500FF0738 /* SchoolsRepository.swift */; };
+		1AE1AE3C228778E500FF0738 /* SchoolsHardCodedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1AE3B228778E500FF0738 /* SchoolsHardCodedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		1A915E6222772F4300F49AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsMapViewController.swift; sourceTree = "<group>"; };
 		1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsMapViewModel.swift; sourceTree = "<group>"; };
+		1AE1AE352286FB6900FF0738 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		1AE1AE372286FDDD00FF0738 /* SchoolsMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsMapViewDelegate.swift; sourceTree = "<group>"; };
+		1AE1AE392287788500FF0738 /* SchoolsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsRepository.swift; sourceTree = "<group>"; };
+		1AE1AE3B228778E500FF0738 /* SchoolsHardCodedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsHardCodedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +111,9 @@
 			children = (
 				1A915E4022772F4100F49AD3 /* AppDelegate.swift */,
 				1A915E4222772F4100F49AD3 /* ViewController.swift */,
-				1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */,
-				1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */,
-				1A915E4422772F4100F49AD3 /* Main.storyboard */,
+				1AE1AE4022877EEC00FF0738 /* Views */,
+				1AE1AE4122877EFE00FF0738 /* Models */,
 				1A915E4722772F4300F49AD3 /* Assets.xcassets */,
-				1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */,
 				1A915E4C22772F4300F49AD3 /* Info.plist */,
 			);
 			path = "schools map";
@@ -129,6 +135,44 @@
 				1A915E6222772F4300F49AD3 /* Info.plist */,
 			);
 			path = "schools mapUITests";
+			sourceTree = "<group>";
+		};
+		1AE1AE3D22877E7F00FF0738 /* Schools Model */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1AE392287788500FF0738 /* SchoolsRepository.swift */,
+				1AE1AE3B228778E500FF0738 /* SchoolsHardCodedData.swift */,
+				1AE1AE352286FB6900FF0738 /* School.swift */,
+			);
+			path = "Schools Model";
+			sourceTree = "<group>";
+		};
+		1AE1AE3E22877E9A00FF0738 /* Schools Map View */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1AE312286E26600FF0738 /* SchoolsMapViewController.swift */,
+				1AE1AE372286FDDD00FF0738 /* SchoolsMapViewDelegate.swift */,
+				1AE1AE332286E31500FF0738 /* SchoolsMapViewModel.swift */,
+			);
+			path = "Schools Map View";
+			sourceTree = "<group>";
+		};
+		1AE1AE4022877EEC00FF0738 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A915E4922772F4300F49AD3 /* LaunchScreen.storyboard */,
+				1A915E4422772F4100F49AD3 /* Main.storyboard */,
+				1AE1AE3E22877E9A00FF0738 /* Schools Map View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AE1AE4122877EFE00FF0738 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AE1AE3D22877E7F00FF0738 /* Schools Model */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE1AE3C228778E500FF0738 /* SchoolsHardCodedData.swift in Sources */,
+				1AE1AE382286FDDD00FF0738 /* SchoolsMapViewDelegate.swift in Sources */,
 				1AE1AE322286E26600FF0738 /* SchoolsMapViewController.swift in Sources */,
 				1AE1AE342286E31500FF0738 /* SchoolsMapViewModel.swift in Sources */,
 				1A915E4322772F4100F49AD3 /* ViewController.swift in Sources */,
+				1AE1AE3A2287788500FF0738 /* SchoolsRepository.swift in Sources */,
+				1AE1AE362286FB6900FF0738 /* School.swift in Sources */,
 				1A915E4122772F4100F49AD3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
