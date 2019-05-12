@@ -10,7 +10,7 @@ import Foundation
 
 class SchoolsRepository {
   
-  func getSchools () -> [School] {
+  func getSchools () -> [School2] {
     return SchoolsRepository.getHardCodedData()
   }
 }

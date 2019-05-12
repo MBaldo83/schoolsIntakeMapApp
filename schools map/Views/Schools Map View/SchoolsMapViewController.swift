@@ -9,6 +9,8 @@
 import Foundation
 import MapKit
 
+//This is the paret view controller for the mapview to display schools and intake boundaries
+// and all the other views that sit under this
 class SchoolsMapViewController: UIViewController {
   
   @IBOutlet var mapView: MKMapView!
@@ -17,6 +19,9 @@ class SchoolsMapViewController: UIViewController {
   @IBOutlet var offersBasedOnDistanceLabel: UILabel!
   @IBOutlet var estimatedQueuePositionLabel: UILabel!
   @IBOutlet var stackView: UIStackView!
+  @IBOutlet var yearLabel: UILabel!
+  @IBOutlet var stepper: UIStepper!
+  
   let schoolsMapViewModel: SchoolsMapViewModel = SchoolsMapViewModel()
   var schoolsMapViewDelegate: SchoolsMapViewDelegate?
   
@@ -39,14 +44,20 @@ class SchoolsMapViewController: UIViewController {
     updateView(animated: false)
     
     //Starting View Model functions
+    schoolsMapViewModel.yearBeingViewed = SchoolsMapViewModel.defaultYear()
+  
     //Default user location for now, will be removed when provide UI to input postcode
-    schoolsMapViewModel.setRegionWithPostcode("N8 0QJ")
-    schoolsMapViewModel.getSchools()
+    schoolsMapViewModel.requestMapRegionWith(postcode: SchoolsMapViewModel.defaultUserPostode())
+    schoolsMapViewModel.requestSchools()
   }
   
   private func updateView(animated:Bool) {
     
     mapView.setRegion(schoolsMapViewModel.mapRegion, animated: animated)
+    
+    if let year = schoolsMapViewModel.yearBeingViewed {
+      yearLabel.text = "\(year)"
+    }
     
     if let userPlaceMark = schoolsMapViewModel.userLocationPlacemark {
       mapView.addAnnotation(userPlaceMark)
@@ -54,8 +65,12 @@ class SchoolsMapViewController: UIViewController {
     
     for school in schoolsMapViewModel.schools {
       mapView.addAnnotation(school)
-      mapView.addOverlay(school.intakeBoundary)
     }
+    
+    for intakeBoundary in schoolsMapViewModel.intakeBoundariesForCurrentYear {
+      mapView.addOverlay(intakeBoundary)
+    }
+    
   }
   
 }
@@ -75,7 +90,7 @@ extension SchoolsMapViewController: SchoolsMapViewParentDelegate {
     }
   }
   
-  func mapView(_ mapView: MKMapView, didSelect school: School) {
+  func mapView(_ mapView: MKMapView, didSelect school: School2) {
     
     if let knownUserLocation = schoolsMapViewModel.userLocation {
       
@@ -86,7 +101,7 @@ extension SchoolsMapViewController: SchoolsMapViewParentDelegate {
       distanceFromSchoolLabel.text = "\(distance)m"
     }
     
-    intakeRadiusLabel.text = "\(school.intakeBoundary.radius)m"
+//    intakeRadiusLabel.text = "\(school.intakeBoundary.radius)m"
     offersBasedOnDistanceLabel.text = "\(school.offersBasedOnDistance)"
     
     //TODO

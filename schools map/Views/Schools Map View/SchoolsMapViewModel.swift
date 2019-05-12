@@ -15,24 +15,62 @@ protocol ViewModelViewDelegateProtocol: class {
 
 class SchoolsMapViewModel {
   
-  var mapRegion: MKCoordinateRegion
   weak var viewDelegate: ViewModelViewDelegateProtocol?
-  var userLocationPlacemark: MKPlacemark?
-  var userLocation: CLLocation?
-  var schools: [School] = [School]()
-  var schoolsRepository = SchoolsRepository()
+  private var schoolsRepository = SchoolsRepository()
+  private(set) var userLocation: CLLocation?
   
   init() {
     
     self.mapRegion = SchoolsMapViewModel.defaultRegion()
   }
-  
-  func getSchools() {
-    schools = schoolsRepository.getSchools()
-    viewDelegate?.updateView()
+  //MARK: Properties bound to views
+  // Getting value has no side affect
+  // Setting value has side affect of updating view delegate
+  var mapRegion: MKCoordinateRegion {
+    didSet{
+      viewDelegate?.updateView()
+    }
   }
   
-  func setRegionWithPostcode(_ postcode:String) {
+  var userLocationPlacemark: MKPlacemark? {
+    didSet{
+      viewDelegate?.updateView()
+    }
+  }
+  
+  var schools: [School2] = [School2]() {
+    didSet {
+      viewDelegate?.updateView()
+    }
+  }
+  
+  var yearBeingViewed: Int? {
+    didSet {
+      viewDelegate?.updateView()
+    }
+  }
+  
+  //MARK: Functions to get data
+  // No Side affect of getting data
+  var intakeBoundariesForCurrentYear: [SchoolIntakeBoundary] {
+    get {
+      guard let currentYear = yearBeingViewed else {
+        return [SchoolIntakeBoundary]()
+      }
+      
+      let intakeYearsMatchingCurrentYear = schools.flatMap({$0.schoolIntakeYears.filter({$0.year == currentYear})})
+      print(intakeYearsMatchingCurrentYear)
+      return intakeYearsMatchingCurrentYear.compactMap({$0.boundary})
+    }
+  }
+  
+  //MARK: Functions to start data request
+  // Has side affect of setting data and updating view
+  func requestSchools() {
+    schools = schoolsRepository.getSchools()
+  }
+  
+  func requestMapRegionWith(postcode:String) {
     
     let geocoder = CLGeocoder()
     geocoder.geocodeAddressString(postcode) { [weak self] placemarks, error in
@@ -42,10 +80,9 @@ class SchoolsMapViewModel {
          let strongSelf = self {
         
         strongSelf.mapRegion.center = location.coordinate
-        strongSelf.userLocationPlacemark = MKPlacemark(placemark: placemark)
         strongSelf.userLocation = location
+        strongSelf.userLocationPlacemark = MKPlacemark(placemark: placemark)
         
-        strongSelf.viewDelegate?.updateView()
       }
     }
   }
@@ -68,4 +105,15 @@ extension SchoolsMapViewModel {
     return MKCoordinateRegion(center:mapInitialCentre,
                               span: mapInitialSpan)
   }
+  
+  static func defaultYear () -> Int {
+    
+    //TODO Fix this to use calendar when you have some internet!
+    return 2019
+  }
+  
+  static func defaultUserPostode () -> String {
+    return "N8 0QJ"
+  }
+  
 }

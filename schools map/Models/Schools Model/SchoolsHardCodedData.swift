@@ -12,21 +12,24 @@ import MapKit
 
 extension SchoolsRepository {
   
-  static func getHardCodedData() -> [School] {
+  static func getHardCodedData() -> [School2] {
     
-    return [School(name: "North Haringey",
+    return [School2(name: "North Haringey",
                    coordinate: CLLocationCoordinate2D(latitude: 51.58572, longitude: -0.10619),
-                   intakeRadius: 424,
+                   schoolIntakeYears:[SchoolIntakeYear(year: 2019, radius: 200, boundary: nil),
+                                      SchoolIntakeYear(year: 2018, radius: 150, boundary: nil)],
                    color: UIColor.red.withAlphaComponent(0.25),
                    offersBasedOnDistance:40),
-            School(name: "Belmont Junior",
+            School2(name: "Belmont Junior",
                    coordinate: CLLocationCoordinate2D(latitude: 51.59276, longitude: -0.09365),
-                   intakeRadius: 456,
+                   schoolIntakeYears:[SchoolIntakeYear(year: 2019, radius: 300, boundary: nil),
+                                      SchoolIntakeYear(year: 2018, radius: 320, boundary: nil)],
                    color: UIColor.blue.withAlphaComponent(0.25),
                    offersBasedOnDistance:30),
-            School(name: "St Mary's",
+            School2(name: "St Mary's",
                    coordinate: CLLocationCoordinate2D(latitude: 51.58596, longitude: -0.11523),
-                   intakeRadius: 600,
+                   schoolIntakeYears:[SchoolIntakeYear(year: 2019, radius: 400, boundary: nil),
+                                      SchoolIntakeYear(year: 2018, radius: 560, boundary: nil)],
                    color: UIColor.yellow.withAlphaComponent(0.25),
                    offersBasedOnDistance:40)]
   }

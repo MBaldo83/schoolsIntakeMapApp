@@ -10,10 +10,13 @@ import Foundation
 import MapKit
 
 protocol SchoolsMapViewParentDelegate: class {
-  func mapView(_ mapView:MKMapView, didSelect school:School)
+  func mapView(_ mapView:MKMapView, didSelect school:School2)
   var userLocation: CLLocation? { get }
 }
 
+//This class handles the delegate callbacks from MKMapView
+// returning the renderers for the overlays set on the map
+// handling the annotation selected, and communicating back to parent delegate
 class SchoolsMapViewDelegate: NSObject {
   
   let mapView: MKMapView
@@ -61,7 +64,7 @@ extension SchoolsMapViewDelegate: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
     
-    if let selectedSchool = view.annotation as? School {
+    if let selectedSchool = view.annotation as? School2 {
       print("school: \(selectedSchool.name)")
       
       removeOverlaysDistanceOverlays()

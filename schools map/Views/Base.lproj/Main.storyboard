@@ -141,16 +141,34 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="x8l-Pt-iOE">
+                                <rect key="frame" x="16" y="614" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="20d-zl-Z1u"/>
+                                    <constraint firstAttribute="height" constant="29" id="AaF-P9-h5K"/>
+                                </constraints>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am5-ER-wb3">
+                                <rect key="frame" x="118" y="614" width="18" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jmC-41-S1Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Ym-tA-7Wb"/>
                             <constraint firstItem="yWI-gf-595" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5lq-US-ena"/>
+                            <constraint firstItem="x8l-Pt-iOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7ht-ez-5Zb"/>
+                            <constraint firstItem="am5-ER-wb3" firstAttribute="leading" secondItem="x8l-Pt-iOE" secondAttribute="trailing" constant="8" id="Gi1-Jy-e0a"/>
                             <constraint firstItem="yWI-gf-595" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NUn-yO-qD4"/>
                             <constraint firstItem="yWI-gf-595" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R0z-LE-cLk"/>
+                            <constraint firstItem="am5-ER-wb3" firstAttribute="top" secondItem="x8l-Pt-iOE" secondAttribute="top" id="VOX-dt-ug7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jmC-41-S1Z" secondAttribute="trailing" constant="16" id="WnS-19-ch2"/>
                             <constraint firstItem="yWI-gf-595" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fK8-w5-PI6"/>
                             <constraint firstItem="jmC-41-S1Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oem-gM-Lur"/>
+                            <constraint firstItem="am5-ER-wb3" firstAttribute="bottom" secondItem="x8l-Pt-iOE" secondAttribute="bottom" id="pxO-Lu-Bwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x8l-Pt-iOE" secondAttribute="bottom" constant="24" id="wqa-8z-7RF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -161,6 +179,8 @@
                         <outlet property="mapView" destination="yWI-gf-595" id="KDJ-cb-X2z"/>
                         <outlet property="offersBasedOnDistanceLabel" destination="eRY-Rx-AhD" id="r42-dn-3tD"/>
                         <outlet property="stackView" destination="jmC-41-S1Z" id="ksy-4Y-nk7"/>
+                        <outlet property="stepper" destination="x8l-Pt-iOE" id="tFV-vf-3qa"/>
+                        <outlet property="yearLabel" destination="am5-ER-wb3" id="OI0-ct-dNo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
